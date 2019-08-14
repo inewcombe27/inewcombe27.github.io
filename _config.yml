@@ -1,0 +1,26 @@
+title:             NH Home N' Brew
+email:             nhhomenbrew@gmail.com
+description:       NH Home Cooking and Homebrewing
+author:            Ian Newcombe & Mariya Kobets
+baseurl:           ""
+url:               ""
+
+# Social Profiles
+
+
+# Build settings
+markdown:          kramdown
+paginate:          5
+paginate_path:     "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+collections:
+   recipes:
+      output: true
+   homebrews:
+      output: true
+      
+
+

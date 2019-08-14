@@ -1,0 +1,34 @@
+---
+layout: page2
+title: Recipes
+background: '/img/recipes/recipe.jpg'
+---
+
+<!-- <div class = "centered"> -->
+  <!-- <section class = "recipe-cards"> -->
+      <section class = "card-deck">
+      {% for recipe in site.recipes %}
+  <!-- <div class="recipe-card-container"> -->
+      
+  <div class="recipe-card">
+    <a href="{{ recipe.url | prepend: site.baseurl | replace: '//', '/' }}">
+        <img src="{{recipe.icon}}" alt="" class="img-fluid" />  
+        <div class="recipe-card-body">
+      
+      <!-- <span class="card-number card-circle subtle">01</span> -->
+      <!-- <span class="recipe-card-author subtle">{{recipe.author}}</span> -->
+      <h2 class="recipe-card-title">{{ recipe.title }}</h2>
+      <span class="recipe-card-description subtle">{{ recipe.subtitle }}</span>
+      
+      <!-- <div class="recipe-card-read">See The Recipe</div> -->
+      <!-- <span class="card-tag card-circle subtle">C</span> -->
+    </div>
+  </div>
+  <!-- <div class="recipe-card-shadow"></div></a> -->
+  <!-- </div> -->
+  {% endfor %}
+</section>
+
+
+
+ 
