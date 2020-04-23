@@ -28,6 +28,43 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
+     <!-- Homebrew List -->
+     {% for homebrew in site.homebrews limit : 2 %}
+
+     <article class="post-preview">
+       <a href="{{ homebrew.url | prepend: site.baseurl | replace: '//', '/' }}">
+         <h2 class="post-title">{{ homebrew.title }}</h2>
+         {% if homebrew.subtitle %}
+         <h3 class="post-subtitle">{{ homebrew.subtitle }}</h3>
+         {% else %}
+         <h3 class="post-subtitle">{{ homebrew.excerpt | strip_html | truncatewords: 15 }}</h3>
+         {% endif %}
+       </a>
+       <p class="post-meta">Posted by
+         {% if homebrew.author %}
+         {{ homebrew.author }}
+         {% else %}
+         {{ site.author }}
+         {% endif %}
+         on
+         {{ homebrew.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=homebrew.content %}</p>
+     </article>
+     <hr>
+
+     {% endfor %}
+
+
+      <!-- Pager -->
+     <div class="clearfix">
+       <a class="btn btn-primary float-right" href="{{"/homebrew" | relative_url }}">View All Brews &rarr;</a>
+     </div>
+
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {{ content }}
 
         <!-- Home Recipe List -->
         {% for recipe in site.recipes limit : 5 %}
@@ -60,7 +97,8 @@ layout: default
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{"/recipes" | relative_url }}">View All Recipes &rarr;</a>
         </div>
-
       </div>
     </div>
+
+          
   </div>
