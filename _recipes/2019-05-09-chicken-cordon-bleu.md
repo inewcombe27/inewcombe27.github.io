@@ -8,8 +8,9 @@ background: '/img/recipes/cordon/chicken-icon.jpg'
 icon: '/img/recipes/cordon/chicken-icon.jpg'
 ---
 
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HnKAkDmgwiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</center>
 Chicken Cordon Bleu is one of our favorite recipes to make. I made this recipe for Mariya when we first started dating, about 3 years ago. 
 Before that, she had never had it before, but I wanted to impress her, so I decided to make this for her. Since then, it is her most requested dish.
 Many times when we were still in college, I would make Chicken Cordon Bleu at my apartment when Mariya had a late class. I would pack it all
