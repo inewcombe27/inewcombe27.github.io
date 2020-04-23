@@ -3,8 +3,5 @@ _site
 node_modules
 Gemfile.lock
 *.gem
-.DS_Store
 run-local.sh
-img/recipes/.DS_Store
-img/.DS_Store
-.DS_Store
+**/.DS_Store
