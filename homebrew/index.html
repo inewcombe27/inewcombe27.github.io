@@ -4,26 +4,27 @@ title: Home Brew
 background: '/img/homebrew/beer-bar.jpg'
 ---
 
-{% for homebrew in site.homebrews %}
-
-<article class="post-preview">
-  <a href="{{ homebrew.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ homebrew.title }}</h2>
-    {% if homebrew.subtitle %}
-    <h3 class="post-subtitle">{{ homebrew.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">{{ homebrew.excerpt | strip_html | truncatewords: 15 }}</h3>
-    {% endif %}
-  </a>
-  <p class="post-meta">Posted by
-    {% if homebrew.author %}
-    {{ homebrew.author }}
-    {% else %}
-    {{ site.author }}
-    {% endif %}
-    on {{ homebrew.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=homebrew.content %}</p>
-</article>
-
-<hr>
-
-{% endfor %}
+<!-- <div class = "centered"> -->
+  <!-- <section class = "recipe-cards"> -->
+      <section class = "card-deck">
+        {% for homebrew in site.homebrews %}
+  <!-- <div class="recipe-card-container"> -->
+      
+  <div class="recipe-card">
+    <a href="{{ homebrew.url | prepend: site.baseurl | replace: '//', '/' }}">
+        <img src="{{homebrew.icon}}" alt="" class="img-fluid" />  
+        <div class="recipe-card-body">
+      
+      <!-- <span class="card-number card-circle subtle">01</span> -->
+      <!-- <span class="recipe-card-author subtle">{{recipe.author}}</span> -->
+      <h2 class="recipe-card-title">{{ homebrew.title }}</h2>
+      <span class="recipe-card-description subtle">{{ homebrew.subtitle }}</span>
+      
+      <!-- <div class="recipe-card-read">See The Recipe</div> -->
+      <!-- <span class="card-tag card-circle subtle">C</span> -->
+    </div>
+  </div>
+  <!-- <div class="recipe-card-shadow"></div></a> -->
+  <!-- </div> -->
+  {% endfor %}
+</section>
