@@ -1,7 +1,7 @@
 ---
 layout: homebrew
 title:  "Honey Wheat Ale"
-subtitle: "All Grain Brew"
+subtitle: "All Grain Brew Day"
 author: Ian Newcombe
 date:   2020-04-21 21:52:00 -0400
 background: '/img/homebrew/HoneyWheat/HoneyWheat.jpg'
